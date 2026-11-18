@@ -95,11 +95,11 @@ vim.keymap.set('n', '<leader>gs', function() gateway_logstream:close() end)
 vim.keymap.set('n', '<leader>gf', function() gateway_logstream:open_quickfix() end)
 
 vim.api.nvim_create_user_command('Today', function(_)
-  local path = vim.fn.expand('~/dev/journal') .. '/' .. os.date("%Y/%m/%d") .. '.gmi'
+  local path = vim.fn.expand('~/journal') .. '/' .. os.date("%Y/%m/%d") .. '.gmi'
   vim.cmd.edit(path)
 end, { desc = "Edit today's journal entry"})
 
 vim.api.nvim_create_user_command('Tour', function(_)
-  local path = vim.fn.expand('~/dev/journal/lists/tour.gmi')
+  local path = vim.fn.expand('~/journal/lists/tour.gmi')
   vim.cmd.edit(path)
 end, { desc = "Edit the tour list"})
