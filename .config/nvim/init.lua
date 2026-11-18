@@ -1,4 +1,5 @@
 vim.cmd(':colo retrobox')
+vim.o.background = 'dark'
 
 -- :h completeopt
 -- :h lsp-completion
